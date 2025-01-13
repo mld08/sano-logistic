@@ -280,3 +280,20 @@ body {
       transform: translateX(0);
   }
 }
+
+.fade-in-right{
+  opacity: 0;
+  transform: translateX(20px);
+  animation: fadeInRight 2s forwards;
+}
+
+@keyframes fadeInRight {
+  from {
+      opacity: 0;
+      transform: translateX(0);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(20px);
+  }
+}
