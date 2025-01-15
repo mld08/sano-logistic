@@ -39,9 +39,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto nav nav-pills">
                         <li class="nav-item"><a href="index.html" class="nav-link color-black actives">Accueil</a></li>
-                        <li class="nav-item"><a href="presentation.html" class="nav-link color-black">Présentation</a></li>
-                        <li class="nav-item"><a href="nos-activites.html" class="nav-link color-black">Nos activités</a></li>
-                        <li class="nav-item"><a href="nos-partenaires.html" class="nav-link color-black">Nos partenaires</a></li>
+                        <li class="nav-item"><a href="presentation.html" class="nav-link color-black">Présentation</a>
+                        </li>
+                        <li class="nav-item"><a href="nos-activites.html" class="nav-link color-black">Nos activités</a>
+                        </li>
+                        <li class="nav-item"><a href="nos-partenaires.html" class="nav-link color-black">Nos
+                                partenaires</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -65,6 +68,24 @@
     <a href="#" class="btn btn-primary back-to-top" id="backToTop">
         <i class="fa fa-arrow-up"></i>
     </a>
+
+    <!-- Seminaire Modal -->
+    <div class="modal fade" id="seminarModal" tabindex="-1" aria-labelledby="seminarModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="seminarModalLabel">Prochain Séminaire</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- Image du flyer -->
+                    <img src="URL_DU_FLYER" alt="Flyer du Séminaire" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Carousel Hero Section -->
     <div id="heroCarousel" class="i carousel slide" data-bs-ride="carousel">
@@ -112,7 +133,7 @@
             <div class="carousel-item dark-overlay"
                 style="background-image: url('img/digital.jpg');background-repeat:no-repeat;background-size:cover;background-position: center;">
                 <div class="hero">
-                    <div class="container">
+                    <div class="container fade-in">
                         <h1 class="font-poppins-h1 color-yellow mt-5 pt-5">Sano Logistic Digital</h1>
                         <img decoding="async" src="img/Underline_03.svg" alt="" class="depicter-loaded"
                             style="width: 154.998px; height: 10.9999px; left: 0px; top: -1px;">
@@ -300,6 +321,71 @@
         </div>
     </div>
     <!-- End Video -->
+
+    <div class="container py-5">
+        <h1 class="my-4 text-center color-yellow"><i>Nos prochains séminaires</i></h1>
+        <div class="row justify-content-center g-4">
+            <!-- Blog Item 1 -->
+            <div class="col-lg-4 col-md-6 fade-in">
+                <div class="card h-100 border-0 shadow">
+                    <img src="img/slider-3.jpg" 
+                         class="card-img-top" 
+                         alt="Séminaire sur le trading pétrolier">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between text-muted small mb-2">
+                            <span><i class="fas fa-calendar-alt"></i> 14 & 15 Mars 2025</span>
+                        </div>
+                        <h5 class="card-title">
+                            <a href="#" class="text-decoration-none text-dark">
+                                Le trading pétrolier
+                            </a>
+                        </h5>
+                        <p><strong>Intervenants:</strong> Mbissine KOUNTA & Mohamadou Lamine SANO</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Blog Item 2 -->
+            <div class="col-lg-4 col-md-6 fade-in">
+                <div class="card h-100 border-0 shadow">
+                    <img src="img/slider-3.jpg" 
+                         class="card-img-top" 
+                         alt="Assane Mbengue">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between text-muted small mb-2">
+                            <span><i class="fas fa-calendar-alt"></i> 06 & 07 Juin 2025</span>
+                        </div>
+                        <h5 class="card-title">
+                            <a href="#" class="text-decoration-none text-dark">
+                                Les techniques de paiement à l’import et à l’export : le crédit documentaire
+                            </a>
+                        </h5>
+                        <p><strong>Intervenants:</strong> Ibrahima CISSE & Mor Talla BEYE</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Blog Item 3 -->
+            <div class="col-lg-4 col-md-6 fade-in">
+                <div class="card h-100 border-0 shadow">
+                    <img src="img/slider-3.jpg" 
+                         class="card-img-top" 
+                         alt="HANDICAP ET MOBILITÉ">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between text-muted small mb-2">
+                            <span><i class="fas fa-calendar-alt"></i> 26 & 27 Septembre 2025</span>
+                        </div>
+                        <h5 class="card-title">
+                            <a href="#" class="text-decoration-none text-dark">
+                                Les opérations logistiques dans le secteur humanitaire
+                            </a>
+                        </h5>
+                        <p><strong>Intervenants:</strong> Mohamadou Lamine SANO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
 
     <!-- Notre équipe -->
     <section class="py-5">
@@ -558,6 +644,12 @@
     <script src="js/popper.js"></script>
     <script src="js/backtotop.js"></script>
     <script src="js/countUp.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var seminarModal = new bootstrap.Modal(document.getElementById('seminarModal'));
+            seminarModal.show();
+        });
+    </script>
 </body>
 
 </html>

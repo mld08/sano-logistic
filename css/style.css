@@ -129,7 +129,7 @@ body {
 /* Pour les écrans très larges */
 @media (min-width: 1201px) {
   .i .carousel-inner .carousel-item {
-    height: 60vh; /* Conserve la pleine hauteur */
+    height: 80vh; /* Conserve la pleine hauteur */
   }
 
   .hero {
