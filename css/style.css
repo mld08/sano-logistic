@@ -297,3 +297,21 @@ body {
       transform: translateX(20px);
   }
 }
+
+.custom-carousel-btn {
+  background-color: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  border-radius: 50%;
+}
+
+.custom-carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Fond noir plus foncé au survol */
+}
+
+
